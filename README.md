@@ -8,7 +8,7 @@ Installation
 1. Follow the conventional installation instructions for REFPROP.
 2. For Linux, compile REFPROP via [REFPROP-cmake](https://github.com/usnistgov/REFPROP-cmake) and copy the resulting `librefprop.so` library file to the REFPROP installation directory.
 3. Ensure that the system environment variable `RPprefix` is set to the location of the REFPROP installation (e.g., `C:\Program Files (x86)\REFPROP`).
-4. Install CMake, version 3.26 or newer.
+4. Install CMake, version 3.22 or newer.
    1. Windows: https://cmake.org/download/
    2. Linux: `sudo apt install cmake`
 5. Install Git, version 2.0 or newer.

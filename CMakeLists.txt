@@ -69,8 +69,4 @@ target_include_directories(refprop PUBLIC
 )
 
 # Link libraries
-if(WIN32)
-  target_link_libraries(refprop PUBLIC
-    MemoryModule
-  )
-endif()
+target_link_libraries(refprop PUBLIC $<$<PLATFORM_ID:Windows>:MemoryModule>)

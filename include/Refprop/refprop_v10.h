@@ -10,7 +10,7 @@
 #include "utils.h"
 
 // Macro to cast a string to a const char*
-#define STR_TO_CHAR(hrf) const_cast<char*>(hrf.c_str())
+#define STR_TO_CHAR(hrf) const_cast<char*>((hrf).c_str())
 
 class RefpropV10 {
 public:

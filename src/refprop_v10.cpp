@@ -1,4 +1,5 @@
 #define REFPROP_IMPLEMENTATION                      // only include in one file and not the header
+#include "REFPROP_lib.h"
 #include <vector>
 #include <string>
 #include <map>

@@ -4,10 +4,11 @@
     {
       "name": "windows-base",
       "hidden": true,
-      "generator": "Ninja",
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "cl.exe",
-        "CMAKE_CXX_COMPILER": "cl.exe"
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build_windows",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
       },
       "condition": {
         "type": "equals",
@@ -19,12 +20,6 @@
       "name": "x64-debug",
       "displayName": "x64 Debug",
       "inherits": "windows-base",
-      "binaryDir": "${sourceDir}/build_windows/Debug",
-      "installDir": "${sourceDir}/build_windows/Debug/install",
-      "architecture": {
-        "value": "x64",
-        "strategy": "external"
-      },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug"
       }
@@ -32,12 +27,11 @@
     {
       "name": "x64-release",
       "displayName": "x64 Release",
-      "inherits": "x64-debug",
-      "binaryDir": "${sourceDir}/build_windows/Release",
-      "installDir": "${sourceDir}/build_windows/Release/install",
+      "inherits": "windows-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
-      }
+      },
+      "installDir": "${sourceDir}/build_windows/install"
     },
     {
       "name": "linux-base",
@@ -64,7 +58,8 @@
       "binaryDir": "${sourceDir}/build_linux/Debug",
       "installDir": "${sourceDir}/build_linux/Debug/install",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       }
     },
     {
@@ -74,8 +69,23 @@
       "binaryDir": "${sourceDir}/build_linux/Release",
       "installDir": "${sourceDir}/build_linux/Release/install",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "windows-debug",
+      "displayName": "Debug",
+      "configurePreset": "x64-debug",
+      "configuration": "Debug"
+    },
+    {
+      "name": "windows-release",
+      "displayName": "Release",
+      "configurePreset": "x64-release",
+      "configuration": "Release"
     }
   ]
 }
