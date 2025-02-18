@@ -21,7 +21,7 @@ else()
   FetchContent_Declare(
     manyso
     GIT_REPOSITORY https://github.com/usnistgov/manyso
-    GIT_TAG 8ad7331582143923ee2c04d522d3bc0c1005794d
+    GIT_TAG 527d3abae03fea92f967ad0fae243f01cb940330
     GIT_SHALLOW TRUE                    # TRUE=retrieve only latest commit in tree
     SOURCE_DIR ${MANYSO_SOURCE_DIR}     # local destination turned source directory
   )
