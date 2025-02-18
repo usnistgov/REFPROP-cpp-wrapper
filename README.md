@@ -59,4 +59,4 @@ REFPROP can also be called using the header defining the library at: [REFPROP-he
 
 Help
 -----
-Please file an issue at https://github.com/usnistgov/REFPROP-issues and we will get back to you as quickly as possible. Please don't email NIST staff directly, the only exception being if you have proprietary code that cannot be shared publicly.
+Please file an issue at https://github.com/usnistgov/REFPROP-cpp-wrapper/issues and we will get back to you as quickly as possible. Please don't email NIST staff directly, the only exception being if you have proprietary code that cannot be shared publicly.
