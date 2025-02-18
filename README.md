@@ -49,6 +49,7 @@ Installation
     
        make
        ```
+    **NOTE**: If CMake does not properly fetch the [manyso](https://github.com/usnistgov/manyso) repository, you can manually clone it into `/external/manyso/`, or `/external/refprop/external/manyso` if using the example, and then re-run CMake.
 10. The `main.cpp` file in the `/src` directory in the example code shows how to call various REFPROP functions.
 
 
